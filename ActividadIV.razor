@@ -1,0 +1,57 @@
+@page "/forfishes"
+<div class="jumbotron">
+    @for (int i = 0; i < Movies.Count; i++)
+    {
+        <div class="list-group mb-3">
+            <a href="#" class="list-group-item list-group-item-action flex-column aling-items-start">
+                <div class="row">
+                    <div class="col md-3">
+                        <img class="img-thumbnail" src=@Movies[i].MovieImage alt="" height="200px" width="200px">
+                    </div>
+                    <div class="cold-md-9">
+                        <h4 class="text-left">
+                            Gender:
+                            <small class="text-muted">@Movies[i].MovieGender</small>
+                        </h4>
+                        <p class="mb-0 text-left">@Movies[i].MovieDescription</p>
+                        <footer class="blockquote-footer text-left">Publication Date<cite
+                             title="Source Title">@Movies[i].PublicationDate.ToString("yyyy/MM/dd")</cite></footer>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+@code{
+    private List<Movie> GetMovies()
+        {
+        return new List<Movie>
+            {
+                new Movie(){
+                MovieTitle="IT",
+                MovieGender="Terror",
+                MovieDescription="Seven young outcasts in Derry, Maine, are about to face their worst nightmare -- an ancient, shape-shifting evil that emerges from the sewer every 27 years to prey on the town's children. Banding together over the course of one horrifying summer, the friends must overcome their own personal fears to battle the murderous, bloodthirsty clown known as Pennywise.",
+                MovieImage="/Images/IT.jpg",
+                MovieDirector="Director: Andy Muschietti",
+                PublicationDate= new DateTime (2021,04,25)},  
+
+                new Movie(){
+                MovieTitle="The Invredibles",
+                MovieGender="Cartoon",
+                MovieDescription="Bob Parr (A.K.A. Mr. Incredible), and his wife Helen (A.K.A. Elastigirl), are the world's greatest famous crime-fighting superheroes in Metroville. Always saving lives and battling evil on a daily basis. But fifteen years later, they have been forced to adopt civilian identities and retreat to the suburbs where they have no choice but to retire as superheroes to live a normal life with their three children Violet, Dash and Jack-Jack (who were secretly born with superpowers). Itching to get back into action, Bob gets his chance when a mysterious communication summons him to a remote island for a top secret assignment. He soon discovers that it will take a super family effort to rescue the world from total destruction.",
+                MovieImage="/Images/LosIncreibles.jpg",
+                MovieDirector="Director: Brad Bird",
+                PublicationDate = new DateTime (2021,04,25)},  
+
+
+                new Movie(){
+                MovieTitle="Black Widow",
+                MovieGender="Action",
+                MovieDescription="In Marvel Studios action-packed spy thriller Black Widow, Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+                MovieImage="/Images/BlackWidow.jpg",
+                MovieDirector="Director: Cate Shortland",
+                PublicationDate = new DateTime (2021,09,03)}  
+            };  
+     }  
+     public List<Movie> Movies {get{return GetMovies();}}  
+}

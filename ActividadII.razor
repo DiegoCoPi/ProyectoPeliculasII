@@ -1,0 +1,59 @@
+@page "/counter"
+<div class="jumbotron">
+    <img src=@BetaMovie1.MovieImage class="img-center" alt="Responsive image" height="400px" width="400px">
+    <h3 class="text-left">
+        <small class="text-muted">Gender:@BetaMovie1.MovieGender</small>
+    </h3>
+    <blockquote class="blockquote text-left">
+        <p class="mb-0">@BetaMovie1.MovieDescription</p>
+        <footer class="class-blockquote-footer">Publication Date<cite title="Source title">
+         @BetaMovie1.PublicationDate.ToString("yyyy/mm/dd")</cite></footer>
+    </blockquote>
+</div>
+
+<div class="jumbotron">
+    <img src=@BetaMovie2.MovieImage class="img-center" alt="Responsive image" height="400px" width="400px">
+    <h3 class="text-left">
+        <small class="text-muted">Gender:@BetaMovie2.MovieGender</small>
+    </h3>
+    <blockquote class="blockquote text-left">
+        <p class="mb-0">@BetaMovie2.MovieDescription</p>
+        <footer class="class-blockquote-footer">Publication Date<cite title="Source title">
+         @BetaMovie2.PublicationDate.ToString("yyyy/mm/dd")</cite></footer>
+    </blockquote>
+</div>
+
+@code{
+    private Movie GetMovie1(){
+        return new Movie()
+        {
+           MovieTitle="IT", 
+           MovieGender="Terror",
+           MovieDescription="Seven young outcasts in Derry, Maine, are about to face their worst nightmare -- an ancient, shape-shifting evil that emerges from the sewer every 27 years to prey on the town's children. Banding together over the course of one horrifying summer, the friends must overcome their own personal fears to battle the murderous, bloodthirsty clown known as Pennywise.",
+           MovieImage="/Images/IT.jpg", 
+           MovieDirector="Andy Muschietti",
+           ActorActress="Jaeden Martell, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard",
+           PublicationDate= new DateTime(2021,09,19)
+        };
+    }
+
+     private Movie GetMovie2(){
+        return new Movie()
+        {
+            MovieTitle="Black Widow",
+            MovieGender="Action",
+            MovieDescription="In Marvel Studios action-packed spy thriller Black Widow, Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+            MovieImage="/Images/BlackWidow.jpg",
+            MovieDirector="Andy Muschietti",
+            ActorActress="Jaeden Martell, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard",
+            PublicationDate= new DateTime(2018,11,25)
+        };
+    }
+
+    public Movie BetaMovie1
+    {get{return GetMovie1();}}
+
+    public Movie BetaMovie2
+    {get{return GetMovie2();}}
+
+}

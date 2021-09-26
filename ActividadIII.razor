@@ -1,0 +1,123 @@
+﻿@page "/fetchdata"
+<div class="jumbotron">
+    @foreach (var movie in GetMovies())
+    {
+         <div class="list-group mb-3">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-star">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="@movie.MovieImage" alt="" height="200px" width="200px">  
+                    </div>
+                    <div class="col-md-9">
+                        <h4 class="text-left">
+                            Title:
+                            <small class="text-muted">@movie.MovieTitle</small>
+                        </h4> 
+                        <p class="mb-0 text-left">@movie.MovieDescription</p>
+                        <p class="mb-0 text-left">Gender: @movie.MovieGender</p>
+                        <p class="mb-0 text-left">Cast: @movie.ActorActress</p>
+                        <footer class="blockquote.footer text-left">Publication date:   <cite
+                             title="Sopurce title">@movie.PublicationDate.ToString("yyyy/MM/dd")</cite></footer>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+    }
+</div>    
+
+@code{
+     private List<Movie> GetMovies()
+    {
+        return new List<Movie>(){
+            new Movie(){
+                MovieTitle="IT",
+                MovieGender="Terror",
+                MovieDescription="Seven young outcasts in Derry, Maine, are about to face their worst nightmare -- an ancient, shape-shifting evil that emerges from the sewer every 27 years to prey on the town's children. Banding together over the course of one horrifying summer, the friends must overcome their own personal fears to battle the murderous, bloodthirsty clown known as Pennywise.",
+                MovieImage="/Images/IT.jpg",
+                ActorActress="Jaeden Martell, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard",
+                PublicationDate= new DateTime (2021,04,25)},  
+
+            new Movie(){
+                MovieTitle="The Incredibles",
+                MovieGender="Cartoon",
+                MovieDescription="Bob Parr (A.K.A. Mr. Incredible), and his wife Helen (A.K.A. Elastigirl), are the world's greatest famous crime-fighting superheroes in Metroville. Always saving lives and battling evil on a daily basis. But fifteen years later, they have been forced to adopt civilian identities and retreat to the suburbs where they have no choice but to retire as superheroes to live a normal life with their three children Violet, Dash and Jack-Jack (who were secretly born with superpowers). Itching to get back into action, Bob gets his chance when a mysterious communication summons him to a remote island for a top secret assignment. He soon discovers that it will take a super family effort to rescue the world from total destruction.",
+                MovieImage="/Images/LosIncreibles.jpg",
+                ActorActress="Samuel, Jackson,Holly Hunter,Craig Nelson,Sara Vowell,Bob Odenkirk",
+                PublicationDate = new DateTime (2021,04,25)},  
+
+            new Movie(){
+                MovieTitle="Black Widow",
+                MovieGender="Action",
+                MovieDescription="In Marvel Studios action-packed spy thriller Black Widow, Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+                MovieImage="/Images/BlackWidow.jpg",
+                ActorActress=" Scarlett Johanson, Florence Pugh, Rachel Weisz, David Harbour",
+                PublicationDate = new DateTime (2021,09,03)},  
+
+            new Movie(){
+                MovieTitle="Shang-Chi And The Legend Of The Ten Rings",
+                MovieGender="Fiction Sciencie",
+                MovieDescription="Shang-Chi, he should face to past that belived leave back the past when see involucred in a misterious network of the Ten Rings",
+                MovieImage="/Images/DiezAnillos.jpg",
+                ActorActress="Simu Liu, Tony Leung, Awkwafina, Fala Chen, Meng’er Zhang, Florian Munteanu y Ronny Chieng con Michelle Yeoh",
+                PublicationDate = new DateTime (2021,09,03)},      
+                                
+            new Movie(){
+                MovieTitle="Little Q",
+                MovieGender="Drama",
+                MovieDescription="A little worker 'Little Q' is training for convert a guide dog for the blind. When finish is going to be send to help a chef.",
+                MovieImage="/Images/EternosCompaneros.jpg",
+                ActorActress="Simon Yam, Gigi Leung, Him Law, Charlie Yeung, Mabel Yuan, Angela Yuen, Liu Chutian",
+                PublicationDate = new DateTime (2021,09,03)},  
+
+            new Movie(){
+                MovieTitle="The comeback Trail",
+                MovieDescription="For attemp to pay his debt and save himself life, Max Barder decides produce a new movie, having as objective kill to main person Duke Montana, during the shooting and caching the insurance",
+                MovieImage="/Images/LaUltimaEstafa.jpg",
+                ActorActress="Anthony Bajon, Damien Chapelle, Alex Brendemuh",
+                PublicationDate = new DateTime (2021,09,03)},      
+
+            new Movie(){    
+                MovieTitle="Miss Revolution",
+                MovieDescription="Year 1970. Miss world celebrates in London. It is the television event watches of the planet.In full transmition, one women liberation movement interrupts the television program, where born a new women ideal ",
+                MovieImage="/Images/MissRevolucion.jpg",
+                ActorActress="Keira Knightley, Gugu Mbatha-Raw, Jessie Buckley, Greg Kinnear",
+                PublicationDate = new DateTime (2021,09,03)},   
+
+            new Movie(){
+                MovieTitle="The Ice Road",
+                MovieDescription="After of the collapse of a little diamond mine , in the extreme north of Canada, a truck driver will be a leader of the complex rescue mission.",
+                MovieImage="/Images/RiesgoBajoCero.jpg",
+                ActorActress="Liam Neeson, Marcus Thomas, Laurence Fishburne",
+                PublicationDate = new DateTime (2021,09,03)}, 
+
+            new Movie(){    
+                MovieTitle="Rock Dog 2",
+                MovieDescription="When Body and him rock band out of Snow Montain for go to on tour with pop sensation star.",
+                MovieImage="/Images/RockDog.jpg",
+                ActorActress="Michael Adamthwaite, Ashleigh Ball, Katleen Barr",
+                PublicationDate = new DateTime (2021,09,03)},  
+
+            new Movie(){
+                MovieTitle="Ron’s Gone Wrong",
+                MovieDescription="Ron's Gone wrong it is the history of Barney, a shy high school student and him new digital device connect to internet that helps to walk and Speak and later time will be convert in him best friend",
+                MovieImage="/Images/RonDaError.jpg",
+                ActorActress="Zach Galifianakis (Un viaje en el tiempo), Jack Dylan Grazer (¡Shazam!), Olivia Colman (The Crown), Ed Helms (The Office), Justice Smith (Jurassic World: El reino caído), Rob Delaney (DEADPOOL 2), Kylie Cantrall (Gabby Duran: Niñera de aliens), Ricardo Hurtado (Los Goldbergs), Marcus Scribner (Black-ish) y Thomas Barbusca (Chad).",
+                PublicationDate = new DateTime (2021,09,03)},   
+
+            new Movie(){
+                MovieTitle="No Time to Die",
+                MovieDescription="No Time to Die. Bond had been left the active service and enjoys of a quite life in Jamaica. Him peace is short, because he has a mission to rescue a scienfic that had beem secuestred.",
+                MovieImage="/Images/SinTiempoParaMorir.jpg",
+                ActorActress="Daniel Craig, Ralph Fiennes, Naomie Harris, Rory Kinnear, Léa Seydoux, Ben Whishaw, Jeffrey Wright, Ana de Armas, Dali Benssalah, David Dencik, Lashana Lynch, Billy Magnussen y Rami Malek.",
+                PublicationDate = new DateTime (2021,09,03)},  
+
+            new Movie(){
+                MovieTitle="Un divan à Tunis",
+                MovieDescription="After of Studying and working in France, Selma opens sheself own door for psychoanalithyc consulte in Tunisia. Versus every pronostic, Tunisia will be come of it origin.",
+                MovieImage="/Images/TerapiaALaFrancesa.jpg",
+                ActorActress="Golshifteh Farahani, Majd Mastoura, Aïsha Ben Miled",    
+                PublicationDate = new DateTime (2021,09,03)}    
+        };
+    }
+}

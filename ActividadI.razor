@@ -1,0 +1,151 @@
+﻿@page "/"
+<div class="jumbotron">
+    @*First Row*@
+    <div class="card-deck mb-3">
+        @*First Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/IT.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle1</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector1</em></h5>            
+                </div>
+        </div>    
+        @*Second Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/BlackWidow.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle2</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector2</em></h5>            
+                </div>
+        </div>    
+         @*Third Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/LosIncreibles.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle3</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector3</em></h5>            
+                </div>
+        </div>
+    </div>
+    @*Second Row*@
+    <div class="card-deck mb-3">
+        @*First Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/DiezAnillos.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle4</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector4</em></h5>            
+                </div>
+        </div>    
+        @*Second Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/EternosCompaneros.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle5</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector5</em></h5>            
+                </div>
+        </div>    
+         @*Third Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/LaUltimaEstafa.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle6</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector6</em></h5>            
+                </div>
+        </div>
+    </div>
+    @*Third Row*@
+     <div class="card-deck mb-3">
+        @*First Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/MissRevolucion.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle7</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector7</em></h5>            
+                </div>
+        </div>    
+        @*Second Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/RiesgoBajoCero.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle8</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector8</em></h5>            
+                </div>
+        </div>    
+         @*Third Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/RockDog.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle9</em></h5> 
+                Director: <h5 class="card-title"><em>@MovieDirector9</em></h5>            
+            </div>
+        </div>
+    </div>
+    @*Fourth Row*@
+     <div class="card-deck mb-3">
+        @*First Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/RonDaError.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle10</em></h5>
+                Director: <h5 class="card-title"><em>@MovieDirector10</em></h5>
+            </div>
+        </div>    
+        @*Second Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/SinTiempoParaMorir.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle11</em></h5>
+                Director: <h5 class="card-title"><em>@MovieDirector11</em></h5>
+            </div>
+        </div>    
+         @*Third Element*@
+        <div class="card">
+            <img class="card-img-top" src="/Images/TerapiaALaFrancesa.jpg" alt="Card image cap" height="400px" width="400px">
+            <div class="card-body">
+                Movie: <h5 class="card-title"><em>@MovieTitle12</em></h5>
+                Director: <h5 class="card-title"><em>@MovieDirector12</em></h5>
+            </div>
+        </div>
+    </div>
+</div>
+@code{
+    @*IT*@
+    public string MovieTitle1="IT";
+    public string MovieDirector1="Andy Muschietti";
+    @*Black Widow*@
+    public string MovieTitle2="Black Widiow";
+    public string MovieDirector2="Cate Shortland";
+    @*The Incredibles*@
+    public string MovieTitle3="The Incredibles";
+    public string MovieDirector3="Brad Bird";
+    @*Ten Rings*@
+    public string MovieTitle4="Shang-Chi And The Legend Of The Ten Rings.";
+    public string MovieDirector4="Destin Daniel Cretton";
+    @*Little Q *@
+    public string MovieTitle5="Little Q";
+    public string MovieDirector5="Law Wing-Cheong";
+    @*The comeback Trail*@
+    public string MovieTitle6="The comeback Trail";
+    public string MovieDirector6="Cédric Kahn";
+    @*Miss Revolution*@
+    public string MovieTitle7="Miss Revolution";
+    public string MovieDirector7="Philippa Lowthorpe";
+        @*The Ice Road*@
+    public string MovieTitle8="The Ice Road";
+    public string MovieDirector8="Jonathan Hensleigh";
+        @*Rock Dog 2*@
+    public string MovieTitle9="Rock Dog 2"; 
+    public string MovieDirector9="Mark Baldo";
+        @*Ron’s Gone Wrong*@
+    public string MovieTitle10="Ron’s Gone Wrong";
+    public string MovieDirector10="Jean-Philippe Vine, Sarah Smith";
+    
+    @*No Time to Die*@
+    public string MovieTitle11="No Time to Die";
+    public string MovieDirector11="Cary Joji Fukunaga";
+    
+     @*Un divan à Tunis*@
+    public string MovieTitle12="Un divan à Tunis";
+    public string MovieDirector12="Manele Labidi";
+}
